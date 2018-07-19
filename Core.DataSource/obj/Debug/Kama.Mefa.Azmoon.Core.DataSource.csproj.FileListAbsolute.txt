@@ -1,0 +1,12 @@
+H:\Kama.Git\Mefa\Api\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.API\Libs\Kama.Mefa.Azmoon.Core.DataSource.dll
+H:\Kama.Git\Mefa\Api\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.API\Libs\Kama.Mefa.Azmoon.Core.DataSource.pdb
+H:\Kama.Git\Mefa\Api\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.API\Libs\Kama.Mefa.Azmoon.Core.DataSource.xml
+H:\Kama.Git\Mefa\Api\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.Core.DataSource\obj\Debug\Kama.Mefa.Azmoon.Core.DataSource.csprojResolveAssemblyReference.cache
+H:\Kama.Git\Mefa\Api\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.Core.DataSource\obj\Debug\Kama.Mefa.Azmoon.Core.DataSource.dll
+H:\Kama.Git\Mefa\Api\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.Core.DataSource\obj\Debug\Kama.Mefa.Azmoon.Core.DataSource.pdb
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.API\Libs\Kama.Mefa.Azmoon.Core.DataSource.dll
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.API\Libs\Kama.Mefa.Azmoon.Core.DataSource.pdb
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.API\Libs\Kama.Mefa.Azmoon.Core.DataSource.xml
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.Core.DataSource\obj\Debug\Kama.Mefa.Azmoon.Core.DataSource.csprojResolveAssemblyReference.cache
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.Core.DataSource\obj\Debug\Kama.Mefa.Azmoon.Core.DataSource.dll
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.Core.DataSource\obj\Debug\Kama.Mefa.Azmoon.Core.DataSource.pdb

@@ -1,0 +1,10 @@
+H:\Kama.Git\Mefa\Api\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.Domain\obj\Debug\Kama.Mefa.Azmoon.Domain.csprojResolveAssemblyReference.cache
+H:\Kama.Git\Mefa\Api\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.API\Libs\Kama.Mefa.Azmoon.Domain.dll
+H:\Kama.Git\Mefa\Api\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.API\Libs\Kama.Mefa.Azmoon.Domain.pdb
+H:\Kama.Git\Mefa\Api\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.Domain\obj\Debug\Kama.Mefa.Azmoon.Domain.dll
+H:\Kama.Git\Mefa\Api\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.Domain\obj\Debug\Kama.Mefa.Azmoon.Domain.pdb
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.API\Libs\Kama.Mefa.Azmoon.Domain.dll
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.API\Libs\Kama.Mefa.Azmoon.Domain.pdb
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.Domain\obj\Debug\Kama.Mefa.Azmoon.Domain.csprojResolveAssemblyReference.cache
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.Domain\obj\Debug\Kama.Mefa.Azmoon.Domain.dll
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.Domain\obj\Debug\Kama.Mefa.Azmoon.Domain.pdb

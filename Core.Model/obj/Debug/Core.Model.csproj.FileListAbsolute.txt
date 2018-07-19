@@ -1,0 +1,5 @@
+H:\GithubProjects\OnionArchitecture\Core.Model\obj\Debug\Core.Model.csprojResolveAssemblyReference.cache
+H:\GithubProjects\OnionArchitecture\API\Libs\Core.Model.dll
+H:\GithubProjects\OnionArchitecture\API\Libs\Core.Model.pdb
+H:\GithubProjects\OnionArchitecture\Core.Model\obj\Debug\Core.Model.dll
+H:\GithubProjects\OnionArchitecture\Core.Model\obj\Debug\Core.Model.pdb

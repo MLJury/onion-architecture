@@ -1,0 +1,10 @@
+H:\Kama.Git\Mefa\Api\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.API\Libs\Kama.Mefa.Azmoon.Infrastructure.SmsService.dll
+H:\Kama.Git\Mefa\Api\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.API\Libs\Kama.Mefa.Azmoon.Infrastructure.SmsService.pdb
+H:\Kama.Git\Mefa\Api\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.Infrastructure.SmsService\obj\Debug\Kama.Mefa.Azmoon.Infrastructure.SmsService.csprojResolveAssemblyReference.cache
+H:\Kama.Git\Mefa\Api\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.Infrastructure.SmsService\obj\Debug\Kama.Mefa.Azmoon.Infrastructure.SmsService.dll
+H:\Kama.Git\Mefa\Api\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.Infrastructure.SmsService\obj\Debug\Kama.Mefa.Azmoon.Infrastructure.SmsService.pdb
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.API\Libs\Kama.Mefa.Azmoon.Infrastructure.SmsService.dll
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.API\Libs\Kama.Mefa.Azmoon.Infrastructure.SmsService.pdb
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.Infrastructure.SmsService\obj\Debug\Kama.Mefa.Azmoon.Infrastructure.SmsService.csprojResolveAssemblyReference.cache
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.Infrastructure.SmsService\obj\Debug\Kama.Mefa.Azmoon.Infrastructure.SmsService.dll
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.Infrastructure.SmsService\obj\Debug\Kama.Mefa.Azmoon.Infrastructure.SmsService.pdb

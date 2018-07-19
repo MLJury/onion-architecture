@@ -1,0 +1,2 @@
+﻿آقای/خانم [ApplicantLastName] [ApplicantFirstName]، پرونده شما با کد رهگیری [TrackingCode] و شماره پرونده [DocumentNumber] با موفقیت ارسال شد.
+سامانه تشخیص صلاحیت حرفه ای حسابداران رسمی

@@ -1,0 +1,5 @@
+H:\GithubProjects\OnionArchitecture\API\Libs\Domain.dll
+H:\GithubProjects\OnionArchitecture\API\Libs\Domain.pdb
+H:\GithubProjects\OnionArchitecture\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+H:\GithubProjects\OnionArchitecture\Domain\obj\Debug\Domain.dll
+H:\GithubProjects\OnionArchitecture\Domain\obj\Debug\Domain.pdb

@@ -1,0 +1,165 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="$(SolutionDir)API\bin\System.Web.Http.dll" #>
+<#@ assembly name="$(SolutionDir)API\bin\API.dll" #>
+<#@ import namespace="System" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="API.Controllers" #>
+<#@ output extension=".cs" #>
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Onion.ApiClient.Interface;
+using model = Core.Model;
+
+namespace Onion.ApiClient
+{
+	abstract class Service
+    {
+    }
+<#
+ string QuotedStr(string s) => "\"" + s + "\"";
+
+string GetParameterValueDictionary(MethodInfo method, string route, out string modelParameterName)
+{
+    var lines = new System.Text.StringBuilder();
+    lines.Append("new Dictionary<string, string>{");
+    string modelParamName = "";
+    var parameters = method.GetParameters();
+    for (int pi = 0; pi < parameters.Length; pi++)
+    {
+        var prm = parameters[pi];
+        modelParamName = route.IndexOf("/{" + prm.Name + ":") < 0 ? prm.Name : "";
+        modelParamName = string.IsNullOrWhiteSpace(modelParamName) ? "" : $", {modelParamName}";
+		lines.Append("{" + $"{QuotedStr(prm.Name)}, {prm.Name} == null ? null : {prm.Name}.ToString()" + "}");
+        
+        if (pi < parameters.Length - 1)
+            lines.Append(",");
+    }
+    lines.Append("};");
+    modelParameterName = modelParamName;
+    return lines.ToString();
+}
+
+bool IsPostMethod(MethodInfo method)
+{
+	var httpPostAttr = method.GetCustomAttribute<System.Web.Http.HttpPostAttribute>();
+	var httpGetAttr = method.GetCustomAttribute<System.Web.Http.HttpGetAttribute>();
+
+	if (httpPostAttr != null && httpGetAttr == null)
+		return true;
+	else
+		return false;
+}
+
+string GetDataTypeName(string typeName)
+{
+    const string resultName = "AppCore.Result<";
+    var i = typeName.IndexOf(resultName);
+    if (i >= 0)
+    {
+        i += resultName.Length;
+        typeName = typeName.Substring(i);
+        typeName = typeName.Substring(0, typeName.Length - 2);
+        return typeName;
+    }
+    else
+        return "";
+}
+
+	string GetTypeName(Type t, bool fixTask = false)
+	{
+        var i = t.FullName.IndexOf('`');
+
+        var name = i >= 0 ? t.FullName.Substring(0, i) : t.FullName;
+
+        var generics = string.Empty;
+
+        foreach (var gArgType in t.GetGenericArguments())
+            generics = GetTypeName(gArgType) + ",";
+
+        if (!string.IsNullOrWhiteSpace(generics))
+            name = $"{name}<{generics.TrimEnd(',')}>";
+
+        name = fixTask ? $"Task<{name}>" : name;
+
+		return name.Replace("System.Threading.Tasks.", "")
+				   .Replace("System.Collections.Generic.", "")
+				   .Replace("System.", "")
+				   .Replace("Core.Model.", "model.")
+				   .Replace("AppCore.", "AppCore.");
+
+        }
+
+	string GetControllerName(Type controllerType)
+        {
+            var i = controllerType.Name.LastIndexOf("Controller", StringComparison.OrdinalIgnoreCase);
+            var controllerName = i > 0 ? controllerType.Name.Substring(0, i) : controllerType.Name;
+            return controllerName;
+        }
+
+        string GetRoutPrefix(string controllerName, Type controllerType)
+        {
+            var routePrefixAttr = controllerType.GetCustomAttribute<System.Web.Http.RoutePrefixAttribute>();
+            var routePrefix = routePrefixAttr == null ? $"api/v1/{controllerName}" : routePrefixAttr.Prefix;
+            return routePrefix.TrimEnd('/') + "/";
+        }
+
+        string GetRout(string prefix, MethodInfo method)
+        {
+            var route = method.GetCustomAttribute<System.Web.Http.RouteAttribute>();
+            return prefix + (route == null ? method.Name : route.Template);
+        }
+
+
+	var baseType = typeof(BaseApiController<>);
+
+    var apiAsm = System.Reflection.Assembly.GetAssembly(baseType);
+
+	var apiControllerTypes = apiAsm.GetTypes().Where(t => t.BaseType != null && t.BaseType.IsGenericType && t.BaseType.GetGenericTypeDefinition() == typeof(BaseApiController<>));
+
+	foreach (var apiControllerType in apiControllerTypes)
+    {
+        var controllerName = GetControllerName(apiControllerType);
+        var routePrefix = GetRoutPrefix(controllerName, apiControllerType);
+        var methods = apiControllerType.GetMethods(BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.Instance);
+		#>
+
+		 partial class <#=controllerName#>Service: Service, I<#=controllerName#>Service
+		 {
+			public <#=controllerName#>Service(IOnionClient client)
+			{
+				_client = client;
+			}
+			readonly IOnionClient _client;
+
+			<#foreach (var method in methods){
+				var parameters = method.GetParameters();
+				var isPostMethod = IsPostMethod(method);
+				var isTask = method.ReturnType.BaseType == typeof(System.Threading.Tasks.Task);
+				var returnType = GetTypeName(method.ReturnType, !isTask);
+				var returnDataType = GetDataTypeName(returnType);
+			#>
+            public virtual <#=returnType#> <#=method.Name#>(<#for (int pi = 0; pi < parameters.Length; pi++){var prm = parameters[pi];#> <#=GetTypeName(prm.ParameterType)#> <#=prm.Name#>,<#}#> IDictionary<string, string> httpHeaders = null)
+			{
+			<#var route = GetRout(routePrefix, method);
+				var modelParamName = "";
+				var dicStr = GetParameterValueDictionary(method, route, out modelParamName);
+			#>
+			var routeParamValues = <#=dicStr#>
+			const string url = "<#=route#>";
+			<#if(string.IsNullOrWhiteSpace(returnDataType)){#>
+				return _client.SendAsync(<#=isPostMethod.ToString().ToLower()#>, url, routeParamValues, httpHeaders<#=modelParamName#>);
+			<#} else {#>
+				return _client.SendAsync<<#=returnDataType#>>(<#=isPostMethod.ToString().ToLower()#>, url, routeParamValues, httpHeaders<#=modelParamName#>);
+			<#}#>
+			}
+
+            <#}#>
+		 }
+  <#  }
+#>
+}

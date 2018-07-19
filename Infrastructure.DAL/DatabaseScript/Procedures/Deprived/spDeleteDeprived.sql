@@ -1,0 +1,34 @@
+﻿USE [Kama.Mefa.Azmoon]
+GO
+
+IF EXISTS(SELECT 1 FROM sys.procedures WHERE [object_id] = OBJECT_ID('adm.spDeleteDeprived'))
+	DROP PROCEDURE adm.spDeleteDeprived
+GO
+
+CREATE PROCEDURE adm.spDeleteDeprived
+	@AID UNIQUEIDENTIFIER,
+	@ALog NVARCHAR(MAX)
+WITH ENCRYPTION
+AS
+BEGIN
+	SET NOCOUNT ON;
+	SET XACT_ABORT ON;
+
+	DECLARE @ID UNIQUEIDENTIFIER = @AID,
+		    @Log NVARCHAR(MAX) = ltrim(rtrim(@ALog))
+
+	BEGIN TRY
+		BEGIN TRAN
+
+			DELETE FROM adm.Deprived
+			WHERE ID = @ID
+
+			EXEC pbl.spAddLog @Log
+		COMMIT
+	END TRY
+	BEGIN CATCH
+		;THROW
+	END CATCH
+	
+	RETURN @@ROWCOUNT
+END

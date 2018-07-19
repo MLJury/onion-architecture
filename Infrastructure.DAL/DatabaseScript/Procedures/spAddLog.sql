@@ -1,0 +1,14 @@
+﻿USE [Kama.Mefa.Azmoon]
+GO
+
+IF EXISTS(SELECT 1 FROM sys.procedures WHERE [object_id] = OBJECT_ID('pbl.spAddLog'))
+	DROP PROCEDURE pbl.spAddLog
+GO
+
+CREATE PROCEDURE pbl.spAddLog
+	@ALog NVARCHAR(MAX)
+WITH ENCRYPTION
+AS
+BEGIN
+	RETURN 1
+END

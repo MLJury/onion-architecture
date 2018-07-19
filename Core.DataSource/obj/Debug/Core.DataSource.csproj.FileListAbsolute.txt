@@ -1,0 +1,6 @@
+H:\GithubProjects\OnionArchitecture\Core.DataSource\obj\Debug\Core.DataSource.csprojResolveAssemblyReference.cache
+H:\GithubProjects\OnionArchitecture\API\Libs\Core.DataSource.dll
+H:\GithubProjects\OnionArchitecture\API\Libs\Core.DataSource.pdb
+H:\GithubProjects\OnionArchitecture\API\Libs\Core.DataSource.xml
+H:\GithubProjects\OnionArchitecture\Core.DataSource\obj\Debug\Core.DataSource.dll
+H:\GithubProjects\OnionArchitecture\Core.DataSource\obj\Debug\Core.DataSource.pdb

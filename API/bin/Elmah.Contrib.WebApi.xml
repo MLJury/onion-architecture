@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Elmah.Contrib.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:Elmah.Contrib.WebApi.ElmahHandleErrorApiAttribute">
+            <summary>
+            ASP.NET Web API exception filter for logging errors to ELMAH. This
+            assumes an HttpContext is present (i.e., running under ASP.NET - it
+            will not work as a self-hosted WCF application).
+            </summary>
+            <remarks>
+            Original implementation from http://stackoverflow.com/questions/766610/how-to-get-elmah-to-work-with-asp-net-mvc-handleerror-attribute/779961#779961.
+            Ported from the Elmah.Contrib.Mvc package on NuGet.
+            </remarks>
+        </member>
+    </members>
+</doc>

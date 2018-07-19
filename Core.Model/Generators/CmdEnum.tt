@@ -1,0 +1,77 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data" #>
+<#@ assembly name="System.Reflection" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Collections.Concurrent" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ output extension=".cs" #>
+<#
+            Guid AzmoonID = Guid.Parse("2AC51699-9656-4060-B632-B85E4AF705BA");
+            string connectionString = "Data Source=46.225.116.210;Initial Catalog=Kama.Mefa.Organization;User ID=sa; Password=Kama123qwe!@#";
+            SqlDataReader rdr = null;
+            List<Tuple<Guid, string>> CommandNameAndIDs = new List<Tuple<Guid, string>>();
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("pbl.spGetCommandsForEnum_", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                SqlCommandBuilder.DeriveParameters(cmd);
+
+
+                cmd.Parameters["@AApplicationID"].Value = AzmoonID;
+
+                rdr = cmd.ExecuteReader();
+
+                using (rdr)
+                {
+                    while(rdr.Read())
+                    {
+                        CommandNameAndIDs.Add(new Tuple<Guid, string>(rdr.GetGuid(0), rdr.GetString(1)));
+                    }
+                }
+            }
+#>
+using System;
+using System.Collections.Concurrent;
+
+namespace Kama.Mefa.Azmoon.Core.Model
+{
+		public enum AzmoonCommands : short
+		{
+		Unknown = 0,
+		<#int counter = 1;#>
+		<#foreach(var CommandNameAndID in CommandNameAndIDs)
+		{#>
+			<#=CommandNameAndID.Item2#> = <#=counter++#>,
+		<#}#>
+	}
+		public class CommandDic
+		{
+
+				readonly static Lazy<CommandDic> _instance = new Lazy<CommandDic>(() => new CommandDic());
+
+		        public static CommandDic Instance
+             => _instance.Value;
+
+				readonly ConcurrentDictionary<AzmoonCommands, Guid> _items = new ConcurrentDictionary<AzmoonCommands, Guid>()
+		{
+			[AzmoonCommands.Unknown] = Guid.Empty,
+		<#foreach(var CommandNameAndID in CommandNameAndIDs)
+		{#>
+			[AzmoonCommands.<#=CommandNameAndID.Item2#>] = new Guid("<#=CommandNameAndID.Item1#>"),
+		<#}#>};
+
+				public Guid this[AzmoonCommands account]
+        {
+            get
+            {
+                Guid accountId = Guid.Empty;
+                _items.TryGetValue(account, out accountId);
+                return accountId;
+            }
+        }
+	}
+}

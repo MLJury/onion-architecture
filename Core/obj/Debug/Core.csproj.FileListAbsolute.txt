@@ -1,0 +1,4 @@
+H:\GithubProjects\OnionArchitecture\API\Libs\Core.dll
+H:\GithubProjects\OnionArchitecture\API\Libs\Core.pdb
+H:\GithubProjects\OnionArchitecture\Core\obj\Debug\Core.dll
+H:\GithubProjects\OnionArchitecture\Core\obj\Debug\Core.pdb

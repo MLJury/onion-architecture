@@ -1,0 +1,5 @@
+H:\GithubProjects\OnionArchitecture\API\Libs\Core.MailService.dll
+H:\GithubProjects\OnionArchitecture\API\Libs\Core.MailService.pdb
+H:\GithubProjects\OnionArchitecture\Core.MailService\obj\Debug\Core.MailService.dll
+H:\GithubProjects\OnionArchitecture\Core.MailService\obj\Debug\Core.MailService.pdb
+H:\GithubProjects\OnionArchitecture\Core.MailService\obj\Debug\Core.MailService.csprojResolveAssemblyReference.cache

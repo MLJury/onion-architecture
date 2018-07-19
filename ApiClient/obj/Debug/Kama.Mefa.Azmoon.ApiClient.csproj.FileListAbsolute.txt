@@ -1,0 +1,17 @@
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.ApiClient\bin\Debug\Kama.Mefa.Azmoon.ApiClient.dll.config
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.ApiClient\bin\Debug\Kama.Mefa.Azmoon.ApiClient.xml
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.ApiClient\bin\Debug\Kama.Mefa.Azmoon.ApiClient.dll
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.ApiClient\bin\Debug\Kama.Mefa.Azmoon.ApiClient.pdb
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.ApiClient\bin\Debug\Kama.AppCore.dll
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.ApiClient\bin\Debug\Kama.Library.ApiClient.dll
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.ApiClient\bin\Debug\Kama.Mefa.Azmoon.Core.Model.dll
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.ApiClient\bin\Debug\Kama.Mefa.Organization.ApiClient.dll
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.ApiClient\bin\Debug\Kama.Mefa.Organization.Core.Model.dll
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.ApiClient\bin\Debug\Newtonsoft.Json.dll
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.ApiClient\bin\Debug\Kama.SmsService.Core.Model.dll
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.ApiClient\bin\Debug\Kama.AppCore.pdb
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.ApiClient\bin\Debug\Kama.Mefa.Azmoon.Core.Model.pdb
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.ApiClient\bin\Debug\Newtonsoft.Json.xml
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.ApiClient\obj\Debug\Kama.Mefa.Azmoon.ApiClient.csprojResolveAssemblyReference.cache
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.ApiClient\obj\Debug\Kama.Mefa.Azmoon.ApiClient.dll
+H:\Kama.Git\Mefa\Kama.Mefa.Azmoon.API\Kama.Mefa.Azmoon.ApiClient\obj\Debug\Kama.Mefa.Azmoon.ApiClient.pdb

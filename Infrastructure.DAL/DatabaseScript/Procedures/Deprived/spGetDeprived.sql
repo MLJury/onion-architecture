@@ -1,0 +1,24 @@
+﻿USE [Kama.Mefa.Azmoon]
+GO
+
+IF EXISTS(SELECT 1 FROM sys.procedures WHERE [object_id] = OBJECT_ID('adm.spGetDeprived'))
+	DROP PROCEDURE adm.spGetDeprived
+GO
+
+CREATE PROCEDURE adm.spGetDeprived
+	@AID UNIQUEIDENTIFIER
+WITH ENCRYPTION
+AS
+BEGIN
+	SET NOCOUNT ON;
+	SET XACT_ABORT ON;
+
+	DECLARE @ID UNIQUEIDENTIFIER = @AID
+
+	SELECT *
+	FROM adm.Deprived deprived
+	WHERE ID = @ID
+	Order By CreationDate
+
+	RETURN @@ROWCOUNT
+END

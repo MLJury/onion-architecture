@@ -1,0 +1,17 @@
+H:\GithubProjects\OnionArchitecture\ApiClient\obj\Debug\ApiClient.csprojResolveAssemblyReference.cache
+H:\GithubProjects\OnionArchitecture\ApiClient\obj\Debug\Kama.Mefa.Azmoon.ApiClient.dll
+H:\GithubProjects\OnionArchitecture\ApiClient\obj\Debug\Kama.Mefa.Azmoon.ApiClient.pdb
+H:\GithubProjects\OnionArchitecture\ApiClient\bin\Debug\Kama.Mefa.Azmoon.ApiClient.dll.config
+H:\GithubProjects\OnionArchitecture\ApiClient\bin\Debug\Kama.Mefa.Azmoon.ApiClient.xml
+H:\GithubProjects\OnionArchitecture\ApiClient\bin\Debug\Kama.Mefa.Azmoon.ApiClient.dll
+H:\GithubProjects\OnionArchitecture\ApiClient\bin\Debug\Kama.Mefa.Azmoon.ApiClient.pdb
+H:\GithubProjects\OnionArchitecture\ApiClient\bin\Debug\AppCore.dll
+H:\GithubProjects\OnionArchitecture\ApiClient\bin\Debug\Core.Model.dll
+H:\GithubProjects\OnionArchitecture\ApiClient\bin\Debug\Library.ApiClient.dll
+H:\GithubProjects\OnionArchitecture\ApiClient\bin\Debug\SmsService.Core.Model.dll
+H:\GithubProjects\OnionArchitecture\ApiClient\bin\Debug\Newtonsoft.Json.dll
+H:\GithubProjects\OnionArchitecture\ApiClient\bin\Debug\AppCore.pdb
+H:\GithubProjects\OnionArchitecture\ApiClient\bin\Debug\Core.Model.pdb
+H:\GithubProjects\OnionArchitecture\ApiClient\bin\Debug\Library.ApiClient.pdb
+H:\GithubProjects\OnionArchitecture\ApiClient\bin\Debug\SmsService.Core.Model.pdb
+H:\GithubProjects\OnionArchitecture\ApiClient\bin\Debug\Newtonsoft.Json.xml

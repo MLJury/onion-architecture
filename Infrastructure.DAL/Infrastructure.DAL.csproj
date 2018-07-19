@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E648B5DB-0DBD-4A16-9E5D-223B31983D54}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Infrastructure.DAL</RootNamespace>
+    <AssemblyName>Infrastructure.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\API\Libs\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Kama.Mefa.Azmoon.API\Libs\Infrastructure.DAL.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AppCore, Version=1.1.0.38884, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\API\Libs\AppCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\API\Libs\Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.DataSource, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\API\Libs\Core.DataSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\API\Libs\Core.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="DatabaseModel, Version=1.1.0.34909, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\API\Libs\DatabaseModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Library.Helper, Version=1.1.0.38884, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\API\Libs\Library.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DatabaseModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DatabaseModel1.cs</LastGenOutput>
+    </Content>
+    <Content Include="DatabaseScript\DB Updates.sql" />
+    <Content Include="DatabaseScript\Functions\date\fnGetShamsiDate.sql" />
+    <Content Include="DatabaseScript\Functions\date\fnIsLeapYear.sql" />
+    <Content Include="DatabaseScript\Functions\date\fnIsLeapYearShamsi.sql" />
+    <Content Include="DatabaseScript\Functions\date\fnSplitStringList.sql" />
+    <Content Include="DatabaseScript\Functions\EmptyGuid.sql" />
+    <Content Include="DatabaseScript\Procedures\AdmissionRequest\spCopyDataFromMemaran_.sql" />
+    <Content Include="DatabaseScript\Functions\fnGetPositionIDByApplicantLastName.sql" />
+    <Content Include="DatabaseScript\Procedures\Applicant\spGetApplicantFromMemaran.sql" />
+    <Content Include="DatabaseScript\Procedures\Applicant\spGetApplicants.sql" />
+    <Content Include="DatabaseScript\Procedures\Command\spGetCommandsByApplicant.sql" />
+    <Content Include="DatabaseScript\Procedures\Command\spGetCommandsByUser.sql" />
+    <Content Include="DatabaseScript\Procedures\Command\spIsUserAuthenticated.sql" />
+    <Content Include="DatabaseScript\Procedures\Conditional\spGetConditional.sql" />
+    <Content Include="DatabaseScript\Procedures\Conditional\spGetConditionals.sql" />
+    <Content Include="DatabaseScript\Procedures\Conditional\spModifyConditional.sql" />
+    <Content Include="DatabaseScript\Procedures\Deprived\spDeleteDeprived.sql" />
+    <Content Include="DatabaseScript\Procedures\Deprived\spEnableDeprived.sql" />
+    <Content Include="DatabaseScript\Procedures\Deprived\spGetDeprived.sql" />
+    <Content Include="DatabaseScript\Procedures\Deprived\spGetDeprivedByNationalCode.sql" />
+    <Content Include="DatabaseScript\Procedures\Deprived\spGetDepriveds.sql" />
+    <Content Include="DatabaseScript\Procedures\Deprived\spModifyDeprived.sql" />
+    <Content Include="DatabaseScript\Procedures\BaseDocument\spDeleteBaseDocument.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamTest\spGetAdmissionExamTests.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamRequest\spGetExamFlowPrerequisite.sql" />
+    <Content Include="DatabaseScript\Procedures\AdmissionRequest\spGetAdmissionRequest.sql" />
+    <Content Include="DatabaseScript\Procedures\DocumentFlow\spDeleteLastFlow_.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamAdmission\Excel\spModifyAbsentsList.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamAdmission\Excel\spModifyPresentsList.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamAdmission\Excel\spModifyDescriptiveScores.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamTest\spGetExamTestByApplicant.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamTest\spModifyExamTest.sql" />
+    <Content Include="DatabaseScript\Procedures\ExemptionRequest\spGetExemptionFlowPrerequisite.sql" />
+    <Content Include="DatabaseScript\Procedures\Interview\spGetInterview.sql" />
+    <Content Include="DatabaseScript\Procedures\Interview\spGetInterviews.sql" />
+    <Content Include="DatabaseScript\Procedures\Interview\spModifyInterview.sql" />
+    <Content Include="DatabaseScript\Procedures\Interview\spSetInterviewConfirmerID.sql" />
+    <Content Include="DatabaseScript\Procedures\Interview\spSetInterviewResult.sql" />
+    <Content Include="DatabaseScript\Procedures\Interview\spSetInterviewDate.sql" />
+    <Content Include="DatabaseScript\Procedures\Inquiry\spGetInquiries.sql" />
+    <Content Include="DatabaseScript\Procedures\Inquiry\spSetInquiryState.sql" />
+    <Content Include="DatabaseScript\Procedures\Objection\spFinalizeObjectionScores.sql" />
+    <Content Include="DatabaseScript\Procedures\Objection\spGetObjection.sql" />
+    <Content Include="DatabaseScript\Procedures\Objection\spGetObjections.sql" />
+    <Content Include="DatabaseScript\Procedures\Objection\spGetObjectionsForCartable.sql" />
+    <Content Include="DatabaseScript\Procedures\Objection\spGetObjectionTests.sql" />
+    <Content Include="DatabaseScript\Procedures\Objection\spModifyObjection.sql" />
+    <Content Include="DatabaseScript\Procedures\Opinion\spModifyProtectionUnitOpinion.sql" />
+    <Content Include="DatabaseScript\Procedures\Payment\spGetPayment.sql" />
+    <Content Include="DatabaseScript\Procedures\Payment\spGetPayments.sql" />
+    <Content Include="DatabaseScript\Procedures\Payment\spModifyPayment.sql" />
+    <Content Include="DatabaseScript\Procedures\Quorum\spGetQuorum.sql" />
+    <Content Include="DatabaseScript\Procedures\Quorum\spGetQuorums.sql" />
+    <Content Include="DatabaseScript\Procedures\Quorum\spModifyQuorum.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamRequest\spUpdateDemandedTestType_.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamTest\spUpdateExamTestState_.sql" />
+    <Content Include="DatabaseScript\Procedures\ExemptionAdmission\spGetExemptionAdmission.sql" />
+    <Content Include="DatabaseScript\Procedures\Opinion\spGetReasons.sql" />
+    <Content Include="DatabaseScript\Procedures\AdmissionRequest\spGetAdmissionRequests.sql" />
+    <Content Include="DatabaseScript\Procedures\Opinion\spGetOpinion.sql" />
+    <Content Include="DatabaseScript\Procedures\Opinion\spModifyBossOpinion.sql" />
+    <Content Include="DatabaseScript\Procedures\Opinion\spModifyExpertOpinion.sql" />
+    <Content Include="DatabaseScript\Procedures\Opinion\spModifySecretaryOpinion.sql" />
+    <Content Include="DatabaseScript\Procedures\AdmissionRequest\spGetAdmissionRequestsByApplicant.sql" />
+    <Content Include="DatabaseScript\Procedures\Admission\spDeleteAdmission.sql" />
+    <Content Include="DatabaseScript\Procedures\Admission\spGetActiveAdmissions.sql" />
+    <Content Include="DatabaseScript\Procedures\Admission\spGetAdmissions.sql" />
+    <Content Include="DatabaseScript\Procedures\ChairNumber\spGetChairNumbers.sql" />
+    <Content Include="DatabaseScript\Procedures\ChairNumber\spModifyChairNumber.sql" />
+    <Content Include="DatabaseScript\Procedures\Applicant\spGetApplicant.sql" />
+    <Content Include="DatabaseScript\Procedures\Applicant\spModifyApplicant.sql" />
+    <Content Include="DatabaseScript\Procedures\DivisionOfLabor\spDeleteDivisionOfLabor.sql" />
+    <Content Include="DatabaseScript\Procedures\DocumentFlow\spAddFlows.sql" />
+    <Content Include="DatabaseScript\Procedures\EducationDegree\spDeleteEducationDegree.sql" />
+    <Content Include="DatabaseScript\Procedures\EducationDegree\spGetEducationDegree.sql" />
+    <Content Include="DatabaseScript\Procedures\EducationDegree\spGetEducationDegrees.sql" />
+    <Content Include="DatabaseScript\Procedures\EducationDegree\spModifyEducationDegree.sql" />
+    <Content Include="DatabaseScript\Procedures\AdmissionRequest\spModifyAdmissionRequest_.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamRequest\spModifyExamRequestChairNumbers.sql" />
+    <Content Include="DatabaseScript\Procedures\ExemptionRequest\spDeleteExemptionRequest.sql" />
+    <Content Include="DatabaseScript\Procedures\ExemptionRequest\spGetExemptionRequest.sql" />
+    <Content Include="DatabaseScript\Procedures\ExemptionRequest\spGetExemptionRequests.sql" />
+    <Content Include="DatabaseScript\Procedures\ExemptionRequest\spGetExemptionRequestsForCartable.sql" />
+    <Content Include="DatabaseScript\Procedures\ExemptionRequest\spModifyExemptionRequest.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamRequest\spGetExamRequestsForCartable.sql" />
+    <Content Include="DatabaseScript\Procedures\ExemptionAdmission\spGetExemptionAdmissions.sql" />
+    <Content Include="DatabaseScript\Procedures\ExemptionAdmission\spModifyExemptionAdmission.sql" />
+    <Content Include="DatabaseScript\Procedures\ManagementHistory\spDeleteManagementHistory.sql" />
+    <Content Include="DatabaseScript\Procedures\ManagementHistory\spGetManagementHistory.sql" />
+    <Content Include="DatabaseScript\Procedures\ManagementHistory\spGetManagementHistories.sql" />
+    <Content Include="DatabaseScript\Procedures\ManagementHistory\spModifyManagementHistory.sql" />
+    <Content Include="DatabaseScript\Procedures\DivisionOfLabor\spGetDivisionOfLabor.sql" />
+    <Content Include="DatabaseScript\Procedures\DivisionOfLabor\spGetDivisionOfLabors.sql" />
+    <Content Include="DatabaseScript\Procedures\DivisionOfLabor\spModifyDivisionOfLabor.sql" />
+    <Content Include="DatabaseScript\Procedures\ProfessionalDegree\spDeleteProfessionalDegree.sql" />
+    <Content Include="DatabaseScript\Procedures\ProfessionalDegree\spGetProfessionalDegree.sql" />
+    <Content Include="DatabaseScript\Procedures\ProfessionalDegree\spGetProfessionalDegrees.sql" />
+    <Content Include="DatabaseScript\Procedures\ProfessionalDegree\spModifyProfessionalDegree.sql" />
+    <Content Include="DatabaseScript\Procedures\EducationField\spDeleteEducationField.sql" />
+    <Content Include="DatabaseScript\Procedures\EducationField\spGetEducationField.sql" />
+    <Content Include="DatabaseScript\Procedures\EducationField\spGetEducationFields.sql" />
+    <Content Include="DatabaseScript\Procedures\EducationField\spModifyEducationField.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamTest\spGetExamTest.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamTest\spGetExamTests.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamTest\spModifyExamTests.sql" />
+    <Content Include="DatabaseScript\Procedures\SurveyTemplate\spDeleteSurveyTemplate.sql" />
+    <Content Include="DatabaseScript\Procedures\SurveyTemplate\spGetSurveyTemplate.sql" />
+    <Content Include="DatabaseScript\Procedures\SurveyTemplate\spGetSurveyTemplates.sql" />
+    <Content Include="DatabaseScript\Procedures\SurveyTemplate\spModifySurveyTemplate.sql" />
+    <Content Include="DatabaseScript\Procedures\Survey\spDeleteSurvey.sql" />
+    <Content Include="DatabaseScript\Procedures\Survey\spGetSurveys.sql" />
+    <Content Include="DatabaseScript\Procedures\Survey\spGetSurveysByAdmission.sql" />
+    <Content Include="DatabaseScript\Procedures\Survey\spModifySurvey.sql" />
+    <Content Include="DatabaseScript\Procedures\WorkPlace\spDeleteWorkPlace.sql" />
+    <Content Include="DatabaseScript\Procedures\WorkPlace\spGetWorkPlaces.sql" />
+    <Content Include="DatabaseScript\Procedures\WorkPlace\spGetWorkPlace.sql" />
+    <Content Include="DatabaseScript\Procedures\WorkPlace\spModifyWorkPlace.sql" />
+    <Content Include="DatabaseScript\Procedures\WorkExperience\spDeleteWorkExperience.sql" />
+    <Content Include="DatabaseScript\Procedures\WorkExperience\spGetWorkExperience.sql" />
+    <Content Include="DatabaseScript\Procedures\WorkExperience\spGetWorkExperiences.sql" />
+    <Content Include="DatabaseScript\Procedures\WorkExperience\spModifyWorkExperience.sql" />
+    <Content Include="DatabaseScript\Procedures\University\spDeleteUniversity.sql" />
+    <Content Include="DatabaseScript\Procedures\University\spGetUniversity.sql" />
+    <Content Include="DatabaseScript\Procedures\University\spGetUniversities.sql" />
+    <Content Include="DatabaseScript\Procedures\University\spModifyUniversity.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamRequest\spDeleteExamRequest.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamRequest\spGetExamRequest.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamRequest\spGetExamRequests.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamRequest\spModifyExamRequest.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamAdmission\spDeleteExamAdmission.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamAdmission\spGetExamAdmission.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamAdmission\spGetExamAdmissions.sql" />
+    <Content Include="DatabaseScript\Procedures\ExamAdmission\spModifyExamAdmission.sql" />
+    <Content Include="DatabaseScript\Procedures\Attachment\spGetAttachment.sql" />
+    <Content Include="DatabaseScript\Procedures\DocumentFlow\spGetFlows.sql" />
+    <Content Include="DatabaseScript\Procedures\BaseDocument\spGetDocumentStatistics.sql" />
+    <Content Include="DatabaseScript\Procedures\DocumentFlow\spSetFlowReadState.sql" />
+    <Content Include="DatabaseScript\Procedures\DocumentFlow\spRejectFlow.sql" />
+    <Content Include="DatabaseScript\Procedures\Admission\spModifyAdmission_.sql" />
+    <Content Include="DatabaseScript\Synonyms\Command.sql" />
+    <Content Include="DatabaseScript\Tables\req.Conditional.Table.sql" />
+    <Content Include="DatabaseScript\trUpdateExamTest.sql" />
+    <Content Include="DatabaseScript\usefull scripts\Convert Azmoon.sql" />
+    <Content Include="DatabaseScript\usefull scripts\select users.sql" />
+    <Content Include="DatabaseScript\usefull scripts\ClearDB.sql" />
+    <Content Include="DatabaseScript\usefull scripts\Memaran Convert.sql" />
+    <Content Include="DatabaseScript\usefull scripts\Data Model.sql" />
+    <Content Include="DatabaseScript\usefull scripts\Memaran Scripts.sql" />
+    <Content Include="DatabaseScript\usefull scripts\reset password.sql" />
+    <Content Include="DatabaseScript\usefull scripts\DeleteAllProcedures.sql" />
+    <Content Include="DatabaseScript\usefull scripts\selects.sql" />
+    <Content Include="DatabaseScript\usefull scripts\Application Commands.sql" />
+    <Compile Include="DatabaseModel1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\AuthDataSource.cs" />
+    <Compile Include="DataSources\MessageDataSource.cs" />
+    <Compile Include="DataSources\DocumentDataSource.cs" />
+    <Compile Include="LayerRegistrar.cs" />
+    <Compile Include="DataSources\AttachmentDataSource.cs" />
+    <Compile Include="DataSources\FlowDataSource.cs" />
+    <Compile Include="_DataSource.cs" />
+    <Compile Include="Extension.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="DatabaseScript\Views\_AdmissionRequest.sql" />
+    <Content Include="DatabaseScript\Views\_Commands.sql" />
+    <Content Include="DatabaseScript\Views\_ExemptionRequest.sql" />
+    <Content Include="DatabaseScript\Views\_ExamRequest.sql" />
+    <Content Include="DatabaseScript\Views\_Objection.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DatabaseScript\Procedures\Attachment\spModifyAttachment.sql" />
+    <Content Include="DatabaseScript\Procedures\Attachment\spDeleteAttachment.sql" />
+    <Content Include="DatabaseScript\Procedures\Attachment\spGetAttachments.sql" />
+    <Content Include="DatabaseScript\Procedures\DocumentFlow\spAddFlow.sql" />
+    <Content Include="DatabaseScript\Procedures\BaseDocument\spModifyBaseDocument_.sql" />
+    <Content Include="DatabaseScript\Procedures\spAddLog.sql" />
+    <Content Include="DatabaseScript\Procedures\SpGenerator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SpGenerator1.sql</LastGenOutput>
+    </Content>
+    <Content Include="DatabaseScript\Procedures\SpGenerator1.sql">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpGenerator.tt</DependentUpon>
+    </Content>
+    <Content Include="DatabaseScript\Schema.sql" />
+    <Content Include="DatabaseScript\Synonyms\Departments.sql" />
+    <Content Include="DatabaseScript\Synonyms\Positions.sql" />
+    <Content Include="DatabaseScript\Synonyms\Users.sql" />
+    <Content Include="DatabaseScript\Synonyms\Places.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

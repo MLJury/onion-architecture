@@ -1,0 +1,2 @@
+﻿آقای/خانم [ApplicantLastName] [ApplicantFirstName]، پرونده شما با کد رهگیری [TrackingCode] غیر واجد شرایط می باشد.
+سامانه تشخیص صلاحیت حرفه ای حسابداران رسمی
