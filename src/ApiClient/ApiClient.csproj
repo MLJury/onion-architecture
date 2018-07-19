@@ -62,7 +62,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ClassGenerator.tt</DependentUpon>
     </Compile>
-    <Compile Include="AzmoonClient.cs" />
+    <Compile Include="OnionClient.cs" />
     <Compile Include="InterfaceGenerator1.cs">
       <DependentUpon>InterfaceGenerator.tt</DependentUpon>
       <DesignTime>True</DesignTime>
