@@ -7,3 +7,6 @@ H:\GithubProjects\OnionArchitecture\Infrastructure.DAL\obj\Debug\Infrastructure.
 H:\GithubProjects\OnionArchitecture\src\Infrastructure.DAL\obj\Debug\Infrastructure.DAL.csprojResolveAssemblyReference.cache
 H:\GithubProjects\OnionArchitecture\src\Infrastructure.DAL\obj\Debug\Infrastructure.DAL.dll
 H:\GithubProjects\OnionArchitecture\src\Infrastructure.DAL\obj\Debug\Infrastructure.DAL.pdb
+H:\GithubProjects\OnionArchitecture\src\API\Libs\Infrastructure.DAL.dll
+H:\GithubProjects\OnionArchitecture\src\API\Libs\Infrastructure.DAL.pdb
+H:\GithubProjects\OnionArchitecture\src\API\Libs\Infrastructure.DAL.xml

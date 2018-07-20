@@ -3,3 +3,8 @@ H:\GithubProjects\OnionArchitecture\API\Libs\Domain.pdb
 H:\GithubProjects\OnionArchitecture\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
 H:\GithubProjects\OnionArchitecture\Domain\obj\Debug\Domain.dll
 H:\GithubProjects\OnionArchitecture\Domain\obj\Debug\Domain.pdb
+H:\GithubProjects\OnionArchitecture\src\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+H:\GithubProjects\OnionArchitecture\src\Domain\obj\Debug\Domain.dll
+H:\GithubProjects\OnionArchitecture\src\Domain\obj\Debug\Domain.pdb
+H:\GithubProjects\OnionArchitecture\src\API\Libs\Domain.dll
+H:\GithubProjects\OnionArchitecture\src\API\Libs\Domain.pdb

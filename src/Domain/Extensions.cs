@@ -26,13 +26,5 @@ namespace Domain
 
         public static bool IsNullOrEmpty(this Guid guid)
             => guid == null || guid == Guid.Empty;
-
-        public static Core.Model.PersianLetterType GetFirstLetter(this string name)
-        {
-            var firstLetter = Core.Model.PersianLetterType.Unknown;
-            Enum.TryParse(name.Trim().Substring(0, 1), out firstLetter);
-
-            return firstLetter;
-        }
     }
 }

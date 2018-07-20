@@ -6,3 +6,5 @@ H:\GithubProjects\OnionArchitecture\Core.Service\obj\Debug\Core.Service.pdb
 H:\GithubProjects\OnionArchitecture\src\Core.Service\obj\Debug\Core.Service.csprojResolveAssemblyReference.cache
 H:\GithubProjects\OnionArchitecture\src\Core.Service\obj\Debug\Core.Service.dll
 H:\GithubProjects\OnionArchitecture\src\Core.Service\obj\Debug\Core.Service.pdb
+H:\GithubProjects\OnionArchitecture\src\API\Libs\Core.Service.dll
+H:\GithubProjects\OnionArchitecture\src\API\Libs\Core.Service.pdb
