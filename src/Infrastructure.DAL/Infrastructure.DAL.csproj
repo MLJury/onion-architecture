@@ -76,7 +76,6 @@
     <Content Include="DatabaseScript\Functions\date\fnIsLeapYearShamsi.sql" />
     <Content Include="DatabaseScript\Functions\date\fnSplitStringList.sql" />
     <Content Include="DatabaseScript\Functions\EmptyGuid.sql" />
-    <Content Include="DatabaseScript\Functions\fnGetPositionIDByApplicantLastName.sql" />
     <Content Include="DatabaseScript\Procedures\Command\spGetCommandsByApplicant.sql" />
     <Content Include="DatabaseScript\Procedures\Command\spGetCommandsByUser.sql" />
     <Content Include="DatabaseScript\Procedures\Command\spIsUserAuthenticated.sql" />
@@ -115,11 +114,7 @@
     <Compile Include="_DataSource.cs" />
     <Compile Include="Extension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="DatabaseScript\Views\_AdmissionRequest.sql" />
     <Content Include="DatabaseScript\Views\_Commands.sql" />
-    <Content Include="DatabaseScript\Views\_ExemptionRequest.sql" />
-    <Content Include="DatabaseScript\Views\_ExamRequest.sql" />
-    <Content Include="DatabaseScript\Views\_Objection.sql" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DatabaseScript\Procedures\Attachment\spModifyAttachment.sql" />
