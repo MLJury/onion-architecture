@@ -6,8 +6,6 @@ namespace Core.Model
 {
     public class DocumentStatisticsListVM : Model
     {
-        public DocumentType DocumentType { get; set; }
-
         public Guid? UserPositionID { get; set; }
     }
 }

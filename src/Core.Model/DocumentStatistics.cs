@@ -11,8 +11,6 @@ namespace Core.Model
     /// </summary>
     public class DocumentStatistics
     {
-        public DocumentType DocumentType { get; set; }
-
         public int UnReadCount { get; set; }
 
         public int InActionCount { get; set; }
