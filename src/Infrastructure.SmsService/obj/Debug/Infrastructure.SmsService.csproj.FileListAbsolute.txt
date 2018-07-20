@@ -3,3 +3,8 @@ H:\GithubProjects\OnionArchitecture\API\Libs\Infrastructure.SmsService.pdb
 H:\GithubProjects\OnionArchitecture\Infrastructure.SmsService\obj\Debug\Infrastructure.SmsService.csprojResolveAssemblyReference.cache
 H:\GithubProjects\OnionArchitecture\Infrastructure.SmsService\obj\Debug\Infrastructure.SmsService.dll
 H:\GithubProjects\OnionArchitecture\Infrastructure.SmsService\obj\Debug\Infrastructure.SmsService.pdb
+H:\GithubProjects\OnionArchitecture\src\API\Libs\Infrastructure.SmsService.dll
+H:\GithubProjects\OnionArchitecture\src\API\Libs\Infrastructure.SmsService.pdb
+H:\GithubProjects\OnionArchitecture\src\Infrastructure.SmsService\obj\Debug\Infrastructure.SmsService.csprojResolveAssemblyReference.cache
+H:\GithubProjects\OnionArchitecture\src\Infrastructure.SmsService\obj\Debug\Infrastructure.SmsService.dll
+H:\GithubProjects\OnionArchitecture\src\Infrastructure.SmsService\obj\Debug\Infrastructure.SmsService.pdb
