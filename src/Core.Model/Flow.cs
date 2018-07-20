@@ -2,6 +2,14 @@
 
 namespace Core.Model
 {
+    public class Flow : Flow<DocState>
+    {
+        public T ToOtherFLowType<T>()
+        {
+            var str = Newtonsoft.Json.JsonConvert.SerializeObject(this);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(str);
+        }
+    }
 
     public class Flow<TDocState>: Model
     {
@@ -26,6 +34,8 @@ namespace Core.Model
         public TDocState FromDocState { get; set; }
 
         public TDocState ToDocState { get; set; }
+
+        public SendType SendType { get; set; }
 
         public string Comment { get; set; }
 

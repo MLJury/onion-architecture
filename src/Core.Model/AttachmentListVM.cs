@@ -6,5 +6,6 @@ namespace Core.Model
     {
         public Guid ParentID { get; set; }
 
+        public AttachmentType Type { get; set; }
     }
 }
