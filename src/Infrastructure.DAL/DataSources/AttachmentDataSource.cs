@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using m = Core.Model;
 
-namespace Kama.Mefa.Azmoon.Infrastructure.DAL
+namespace Infrastructure.DAL
 {
     class AttachmentDataSource : DataSource, Core.DataSource.IAttachmentDataSource
     {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using mdl = Core.Model;
 using AppCore;
 
-namespace Kama.Mefa.Azmoon.Infrastructure.DAL
+namespace Infrastructure.DAL
 {
     class FlowDataSource : DataSource, Core.DataSource.IFlowDataSource
     {

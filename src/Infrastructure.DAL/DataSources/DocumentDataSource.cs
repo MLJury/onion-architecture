@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using mdl = Core.Model;
 
-namespace Kama.Mefa.Azmoon.Infrastructure.DAL
+namespace Infrastructure.DAL
 {
     class DocumentDataSource : DataSource, Core.DataSource.IDocumentDataSource
     {

@@ -2,7 +2,7 @@
 //using System.Collections.Generic;
 //using System.Linq;
 
-//namespace Kama.Mefa.Azmoon.Infrastructure.DAL
+//namespace Infrastructure.DAL
 //{
 //    static class Extension
 //    {

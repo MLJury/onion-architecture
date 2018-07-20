@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.CompilerServices;
 
-namespace Kama.Mefa.Azmoon.Infrastructure.DAL
+namespace Infrastructure.DAL
 {
     abstract class DataSource
     {

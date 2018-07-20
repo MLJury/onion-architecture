@@ -3,7 +3,7 @@
     public class Logger : AppCore.EventLogger.WindowsEventLogger, Core.IEventLogger
     {
         public Logger()
-            : base("Kama.Mefa.Azmoon")
+            : base("Onion")
         {
         }
     }

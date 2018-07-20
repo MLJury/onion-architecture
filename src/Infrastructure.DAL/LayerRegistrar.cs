@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-[assembly:AppCore.IOC.Registrar(typeof(Kama.Mefa.Azmoon.Infrastructure.DAL.LayerRegistrar))]
-namespace Kama.Mefa.Azmoon.Infrastructure.DAL
+[assembly:AppCore.IOC.Registrar(typeof(Infrastructure.DAL.LayerRegistrar))]
+namespace Infrastructure.DAL
 {
     using asm = System.Reflection.Assembly;
     using ds = Core.DataSource;

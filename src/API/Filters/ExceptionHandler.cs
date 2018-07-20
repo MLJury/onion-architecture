@@ -13,7 +13,7 @@ using AppCore;
 namespace API.Exceptions.Filters
 {
     //A global exception handler that will be used to catch any error
-    public class KamaExceptionHandler : IExceptionHandler
+    public class ExceptionHandler : IExceptionHandler
     {
         public virtual Task HandleAsync(ExceptionHandlerContext context, CancellationToken cancellationToken)
         {

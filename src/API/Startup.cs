@@ -48,14 +48,13 @@ namespace API
             //regsiter Filters
             container.RegisterType(typeof(AuthFilter));
             container.RegisterType(typeof(ValidationFilter));
-            container.RegisterType(typeof(KamaExceptionHandler));
+            container.RegisterType(typeof(Exceptions.Filters.ExceptionHandler));
             
             //register command filters in httConfig
             httpConfig.Filters.Add(container.Resolve<AuthFilter>());
             httpConfig.Filters.Add(container.Resolve<ValidationFilter>());
             //Register Exception Loggers and Exception Handler
-            httpConfig.Services.Replace(typeof(IExceptionHandler), container.Resolve<KamaExceptionHandler>());
-            //httpConfig.Services.Replace(typeof(IExceptionLogger), container.Resolve<KamaExceptionLogger>());
+            httpConfig.Services.Replace(typeof(IExceptionHandler), container.Resolve<Exceptions.Filters.ExceptionHandler>());
         }
 
         public void ConfigureIoC(HttpConfiguration httpConfig)
